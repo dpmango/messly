@@ -1,7 +1,6 @@
 'use strict';
 
 $(document).ready(function () {
-  var _this = this;
 
   var _window = $(window);
 
@@ -12,73 +11,49 @@ $(document).ready(function () {
 
   // Smoth scroll
   $('a[href^="#section"]').click(function () {
-    var el = $(_this).attr('href');
+    var el = $(this).attr('href');
     $('body, html').animate({
       scrollTop: $(el).offset().top }, 1000);
     return false;
   });
 
   // owl
-  $('#owlFirst').owlCarousel({
+  $('#owlHero').owlCarousel({
     loop: true,
-    nav: true,
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 7000,
+    responsiveRefreshRate: 50,
+    nav: false,
+    dots: true,
     margin: 0,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    }
+    animateIn: 'fadeInUp',
+    animateOut: 'fadeOutUp'
   });
 
-  // Magnific Popup
-  $('.popup-with-zoom-anim').magnificPopup({
-    type: 'inline',
-    fixedContentPos: false,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
+  $('#owlTestimonials').owlCarousel({
+    loop: false,
+    items: 1,
+    responsiveRefreshRate: 50,
+    nav: true,
+    dots: false,
+    margin: 0
   });
 
-  $('.popup-with-move-anim').magnificPopup({
-    type: 'inline',
-    fixedContentPos: false,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-slide-bottom'
-  });
-
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1]
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-    }
-  });
-
-  // Masked input
-  $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
-  $("input[name='phone']").mask("9 (999) 999-9999");
-  $("#tin").mask("99-9999999");
-  $("#ssn").mask("999-99-9999");
+  // $('#owlHero').owlCarousel({
+  //   loop: true,
+  //   nav: true,
+  //   margin: 0,
+  //   responsive: {
+  //     0:{
+  //       items: 1,
+  //     },
+  //     600:{
+  //       items: 1,
+  //     },
+  //     1000:{
+  //       items: 1,
+  //     }
+  //   }
+  // });
 });

@@ -1,5 +1,8 @@
-# Gulp Starter Pack
-Gulp starter package to use with PostCss or sass, pug, autoprefixer, babel, compile bootstrap, minify assets and perform other common front-end tasks.
+# Messly project - HTML/CSS layout
+ Based on gulp starter package to use with PostCss or sass, pug, autoprefixer, babel, compile bootstrap, minify assets and perform other common front-end tasks.
+
+## DEMO
+https://dpmango.github.io/messly
 
 ## Getting stated
 __Development:__
@@ -23,3 +26,7 @@ __Production__
 - `fonts` - copy fonts to dist folder
 - `browserSync` - serve assets with hot reload from `./src` folder
 - `clean:dist` - clean dist folder to prevent conflicts before build
+
+
+### Recend push command
+gulp build && git add . && git commit -m "draft landing doctors" && git push && git subtree --prefix dist push origin gh-pages

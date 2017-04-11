@@ -1,3 +1,213 @@
 // INDEX PAGE
 .hero
-  opacity: 1
+  min-height: 900px
+  height: 100vh
+  overflow: hidden
+  background: #354052
+  &__title
+    margin-top: 15vh
+    color: white
+    font-size: 52px
+    line-height: 1.1
+    letter-spacing: -.76px
+  &__description
+    margin-top: 25px
+    font-size: 22px
+    line-height: 1.45
+    color: $colorWhiteMuted
+  &__card
+    padding-top: 120px
+    &__wrapper
+      display: flex
+      justify-content: space-between
+    &__content
+      flex: 0 0 450px
+
+  &__image
+    flex: 0 0 auto
+    margin-left: auto
+    position: relative
+    img
+      max-width: 100%
+      position: relative
+      z-index: 6
+    &--retina
+      img
+        transform: scale(.5)
+        transform-origin: top center
+
+  &__cta
+    margin-top: 10vh
+
+
+// SECTIONS
+.section
+  overflow: hidden
+  &--gray
+    padding-top: 100px
+    padding-bottom: 80px
+    background: #F4F4F4
+  &--light-blue
+    padding-top: 80px
+    padding-bottom: 120px
+    background: #FAFBFC
+  &--features
+    padding-top: 120px
+  &--community
+    padding-top: 190px
+    padding-bottom: 90px
+  &--about
+    background: #F4F4F4
+  &--testimonials
+    padding-top: 180px
+    padding-bottom: 130px
+
+.section-title
+  font-size: 52px
+  line-height: 1
+  letter-spacing: -.76px
+  &--green
+    color: $colorGreen
+
+.section-text
+  color: $fontColorMuted
+  font-size: 22px
+  line-height: 1.45
+
+
+// HOW IT WORKS
+.how
+  display: flex
+  justify-content: center
+  &__card
+    flex: 0 1 290px
+    margin-left: 50px
+    margin-right: 50px
+    text-align: center
+    &__title
+      margin-top: 60px
+      font-family: 'ProximaNova-Regular'
+    &__description
+      margin-top: 10px
+      color: $fontColorMuted
+      line-height: 1.56
+
+
+// FEATUES
+.features
+  display: flex
+  margin-top: 90px
+  justify-content: center
+  &__left
+    flex: 0 1 260px
+    text-align: right
+  &__center
+    flex: 0 1 520px
+    padding-left: 15px
+    padding-right: 60px
+    img
+      max-width: 100%
+  &__right
+    flex: 0 1 260px
+  &__block
+    margin-top: 35px
+    .icon
+      font-size: 40px
+      color: #DDDDDD
+    &__title
+      margin-top: 15px
+      font-size: 18px
+      font-family: 'ProximaNova-Regular'
+    &__description
+      margin-top: 8px
+      color: $fontColorMuted
+      line-height: 1.56
+
+
+// COMMUNITY
+.community
+  display: flex
+  justify-content: space-between
+  margin-left: -20px
+  &__image
+    flex: 0 1 560px
+    img
+      max-width: 100%
+  &__content
+    margin-left: auto
+    flex: 0 1 600px
+
+// ABOUT
+.about
+  display: flex
+  align-items: center
+  &__content
+    flex: 0 1 55%
+    margin-right: 50px
+    background: white
+    border: 1px solid #B7D2E5
+    padding: 50px 7% 60px 7%
+    .icon-slideshare
+      font-size: 45px
+      color: #7F8FA4
+      margin-right: 35px
+  &__image
+    flex: 0 1 45%
+    position: relative
+    img
+      max-width: 100%
+    &__tag
+      position: absolute
+      bottom: 20px
+      left: 50%
+      transform: translateX(-50%)
+      background: $colorRed
+      border-radius: 50px
+      color: white
+      padding: 12px 20px
+      font-size: 14px
+      font-family: 'ProximaNova-Regular'
+      span
+        color: color(white a(70%))
+
+
+// TESTIMONAILS
+.testimonials
+  margin-left: 5%
+  margin-right: 5%
+  &__slide
+    margin-left: 100px
+    margin-right: 100px
+  &__content
+    font-size: 32px
+    line-height: 1.42
+    margin-top: 50px
+  &__author
+    font-family: 'ProximaNova-Regular'
+    font-size: 18px
+    margin-top: 80px
+    span
+      display: block
+      font-size: 16px
+      line-height: 1.56
+      margin-top: 10px
+
+
+// BONUS
+.bonus
+  color: white
+  background: #354052
+  padding-top: 85px
+  padding-bottom: 100px
+  .section-text
+    color: color(white a(80%))
+
+  &__form
+    display: flex
+    .ui-input
+      flex: 1 1 33%
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+    .btn
+      flex: 0 0 205px

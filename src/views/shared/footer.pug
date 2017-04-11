@@ -1,15 +1,29 @@
 // FOOTER::START
-footer.footer
+.footer
   .container
-    .row
-      .col-sm-12
+    .row.row--aic
+      .col.col--1-6
+        .footer__socials
+          a(href='#')
+            i.ico.ico-social-fb
+          a(href='#')
+            i.ico.ico-social-tw
+            
+      .col.col--4-6.text-center
+        .footer__menu
+          a(href='#') Privacy
+          a(href='#') Contact
+          a(href='#') Mission
+          a(href='#') Sign In
+          a(href='#') Register
+          
+      .col.col--1-6.text-right
+        .footer__copy © 2017 Messly Ltd
 
 // SCRIPTS
 
 //build:js js/scripts.min.js
 script(src="components/jquery/dist/jquery.min.js")
-script(src="components/magnific-popup/dist/jquery.magnific-popup.min.js")
 script(src="components/owl.carousel/dist/owl.carousel.min.js")
-script(src="js/libs/jquery.maskedinput.min.js")
 script(src="js/main.js")
 //endbuild

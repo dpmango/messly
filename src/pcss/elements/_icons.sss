@@ -3,9 +3,88 @@
   display: inline-block
   font-style: normal
   content: ' '
+  background-repeat: no-repeat
+  background-position: center
+  background-size: contain
+  vertical-align: middle
 
-// mixin
-@define-mixin myIcon $name
-  background: url('../images/$(name).svg') no-repeat center
-  width: 1em
-  height: 1em
+  &-spiral
+    background: url('../images/el/heroCircles.png') no-repeat 100% center
+    size: 1358px
+    position: absolute
+    top: -30%
+    right: -10%
+    z-index: 5
+    animation-name: r2otate
+    animation-duration: 5s
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+
+  &-logo
+    background-image: url('../images/el/V2awhite@2x.png')
+    size: 229px 64px
+
+  &-social-fb
+    background-image: svg-load('../../images/svg/social-facebook.svg', fill=#fff)
+    size: 30px
+    &:hover
+      background-image: svg-load('../../images/svg/social-facebook.svg', fill=$fontColorMuted)
+
+  &-social-tw
+    background-image: svg-load('../../images/svg/social-twitter.svg', fill=#fff)
+    size: 30px
+    &:hover
+      background-image: svg-load('../../images/svg/social-twitter.svg', fill=$fontColorMuted)
+
+  &-how-medical-file
+    background-image: svg-load('../../images/svg/how-medical-file.svg')
+    size: 64px
+  &-how-hospital
+    background-image: svg-load('../../images/svg/how-hospital.svg')
+    size: 64px
+  &-how-swipe
+    background-image: svg-load('../../images/svg/how-swipe.svg')
+    size: 64px
+
+  &-feature-graph
+    background-image: svg-load('../../images/svg/ico-feature-graph.svg')
+    size: 32px 35px
+  &-feature-cloud
+    background-image: svg-load('../../images/svg/ico-feature-cloud.svg')
+    size: 38px 23px
+  &-feature-devise
+    background-image: svg-load('../../images/svg/ico-feature-devise.svg')
+    size: 38px 34px
+  &-feature-globe
+    background-image: svg-load('../../images/svg/ico-feature-globe.svg')
+    size: 34px
+  &-feature-infinity
+    background-image: svg-load('../../images/svg/ico-feature-infinity.svg')
+    size: 34px 15px
+
+
+// ICONMOON
+[class^="icon-"], [class*=" icon-"]
+  font-family: 'icomoon' !important
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+.icon-user-md:before
+  content: "\f0f0"
+.icon-hospital-o:before
+  content: "\f0f8"
+.icon-slideshare:before
+  content: "\f1e7"
+
+@keyframes rotate
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(360deg)

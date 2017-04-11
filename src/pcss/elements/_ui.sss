@@ -1,0 +1,27 @@
+// UI
+.ui-input
+  font-family: 'ProximaNova-Regular'
+  position: relative
+  input, textarea
+    -webkit-appearance: none
+    border-radius: 6px
+    font-size: 16px
+    display: inline-block
+    width: 100%
+    border: 1px solid transparent
+    background: transparent
+    padding: 20px
+    transition: all $transitionSpeed ease
+    box-shadow: none
+    &:focus
+      outline: none
+      box-shadow: 0 0 4px color(white a(40%))
+  &--muted
+    input, textarea
+      border-color: color(white a(20%))
+      color: white
+      &:focus
+        border-color: white
+  &.error
+    input, textarea
+      border-color: $colorRed

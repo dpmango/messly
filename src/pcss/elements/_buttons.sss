@@ -1,17 +1,46 @@
 // buttons
+button
+  &:focus
+    outline: none
+
 .btn
+  font-family: 'ProximaNova-Regular'
+  display: inline-block
+  position: relative
+  text-align: center
+  transition: all $transitionSpeed ease-in-out
   &:focus, &:active
     outline: none
 
-// generic modifiers
-.btn--rounded
-  border-radius: 50%
 
-.btn--outline
-  border: 1px solid transparent
-  &:hover
+  &--ghost
+    padding: 11px 22px
+    background: transparent
+    border-radius: 6px
+    border: 1px solid transparent
+    &--white
+      border-color: color(white a(40%))
+      &:hover
+        background: white
+        color: $fontColor
+    &--muted
+      border-color: #8DABC4
+      color: $fontColorMuted
 
-.btn--abosulte-ico
-  .ico
-    position: absolute 50% 50%
-    transform: translate(-50%, -50%)
+  &--red
+    background: $colorRed
+    color: white
+    border-radius: 6px
+    padding: 20px 20px
+    .icon-user-md
+      position: absolute
+      top: 50%
+      left: 25px
+      transform: translateY(-50%)
+      font-size: 25px
+
+  &--mw240
+    min-width: 240px
+
+  &--block
+    display: block
