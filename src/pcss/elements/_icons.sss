@@ -9,16 +9,31 @@
   vertical-align: middle
 
   &-spiral
-    background: url('../images/el/heroCircles.png') no-repeat 100% center
+    background: url('../images/el/heroCircles.png') no-repeat right center
     size: 1358px
     position: absolute
-    top: -30%
-    right: -10%
-    z-index: 5
-    animation-name: r2otate
-    animation-duration: 5s
-    animation-timing-function: linear
-    animation-iteration-count: infinite
+    top: -45%
+    right: -65%
+    z-index: -1
+    @media($tablet)
+      transform: scale(.8)
+      top: -66%
+      right: -115%
+    @media($mobile)
+      top: -100%
+      right: -150%
+
+  &-hero-phone
+    position: relative
+    background: url('../images/heroPhone.png') no-repeat center center
+    size: 355px 724px
+    background-size: 355px 724px
+    @media($tablet)
+      size: 284px 580px
+      background-size: 284px 580px
+    @media($mobile)
+      size: 230px 500px
+      background-size: 230px 500px
 
   &-logo
     background-image: url('../images/el/V2awhite@2x.png')

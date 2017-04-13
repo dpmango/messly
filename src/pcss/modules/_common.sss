@@ -104,44 +104,62 @@
 
 
 // OWL
-.owl
+.slick
   &--dots-right
     position: relative
-    .owl-dots
+    .slick-dots
       display: flex
       flex-direction: column
       align-items: center
       position: absolute
-      right: 0
-      top: 200px
+      right: 20px
+      top: 50%
       z-index: 5
+      transform: translateY(-50%)
+      @media($mobile)
+        top: 120px
+        transform: none
+      li
+        display: block
+        button
+          display: none
+        &::before
+          display: block
+          content: ' '
+          font-size: 0
+          display: block
+          content: ' '
+          size: 6px
+          background: color(white a(50%))
+          border: none
+          box-shadow: none
+          border-radius: 50%
+          margin-bottom: 10px
+          cursor: pointer
+          transition: all $transitionSpeed ease
+        &.slick-active
+          &::before
+            background: white
+            size: 10px
 
-    .owl-dot
-      display: block
-      content: ' '
-      size: 6px
-      background: color(white a(50%))
-      border-radius: 50%
-      margin-bottom: 10px
-      cursor: pointer
-      transition: all $transitionSpeed ease
-      &.active
-        background: white
-        size: 10px
   &--arrows
-    .owl-next, .owl-prev
+    .slick-prev, .slick-next
       display: block
       content: ' '
       position: absolute
       top: 50%
       size: 16px 28px
       transform: translateY(-50%)
-      background: svg-load('../../images/svg/ico-owl-nav.svg') no-repeat center
+      background: svg-load('../../images/svg/ico-owl-nav.svg', fill=#E7EAEC) no-repeat center
       font-size: 0
-    .owl-next
+      cursor: pointer
+      z-index: 9
+      &:hover
+        background: svg-load('../../images/svg/ico-owl-nav.svg', fill=$fontColorMuted) no-repeat center
+    .slick-next
       transform: translateY(-50%) rotate(180deg)
       right: 0
-    .owl-prev
+    .slick-prev
       left: 0
 
 

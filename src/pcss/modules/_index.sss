@@ -5,9 +5,7 @@
   overflow: hidden
   background: #354052
   .slick-list
-    padding-left: 20px
-    padding-right: 20px
-    margin-top: -20px
+    margin-right: -20px
   &__title
     margin-top: 15vh
     color: white
@@ -20,28 +18,24 @@
     line-height: 1.45
     color: $colorWhiteMuted
   &__card
-    padding-top: 120px
+    min-height: 900px
+    overflow: hidden
     &__wrapper
+      padding-top: 120px
       display: flex
       justify-content: space-between
     &__content
       flex: 0 0 450px
 
   &__image
-    flex: 0 0 auto
-    margin-left: auto
+    flex: 1 1 auto
     position: relative
-    img
-      max-width: 100%
-      position: relative
-      z-index: 6
-    &--retina
-      img
-        transform: scale(.5)
-        transform-origin: top center
+    text-align: center
 
   &__cta
     margin-top: 10vh
+    position: relative
+    z-index: 9
 
   &__sponsor
     margin-top: 10vh
@@ -59,13 +53,60 @@
 
 @media($tablet)
   .hero
+    min-height: 780px
     &__title
       margin-top: 60px
+      font-size: 48px
+    &__card
+      min-height: 780px
+      &__content
+        flex: 0 0 380px
+
 
 @media($mobile)
   .hero
     min-height: 600px
     height: auto
+    .slick-list
+      margin-right: -20px
+      margin-left: -20px
+    &__title
+      margin-top: 0px
+      font-size: 42px
+      br
+        display: none
+    &__description
+      margin-top: 20px
+      font-size: 20px
+      br
+        display: none
+    &__card
+      &__content
+        flex: 0 1 auto
+      &__wrapper
+        flex-direction: column
+
+    &__image
+      margin-right: 0
+      flex: 1 1 auto
+      position: relative
+      text-align: center
+      margin-bottom: 50px
+    &__cta
+      margin-top: 30px
+    &__sponsor
+      margin-top: 50px
+      span
+        font-size: 16px
+        margin-bottom: 15px
+      img
+        margin-left: -5px
+        transform: scale(.4)
+
+@media($mobile-s)
+  .hero
+    &__title
+      font-size: 40px
 
 // SECTIONS
 .section

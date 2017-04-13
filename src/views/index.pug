@@ -9,8 +9,8 @@ html
         
         // HERO :: START
         .hero
-          .container.container--no-pad
-            .owl--dots-right#owlHero
+          .container
+            .slick--dots-right#owlHero
               // card
               .hero__card
                 .hero__card__wrapper
@@ -25,9 +25,9 @@ html
                       span Supported By
                       img(src='images/imperialdarkblue@2x.png')
 
-                  .hero__image.hero__image--retina
-                    i.ico.ico-spiral
-                    img(src='images/heroPhone.png')
+                  .hero__image
+                    i.ico.ico-hero-phone
+                      i.ico.ico-spiral
               // card
               .hero__card
                 .hero__card__wrapper
@@ -42,9 +42,9 @@ html
                       span Supported By
                       img(src='images/imperialdarkblue@2x.png')
 
-                  .hero__image.hero__image--retina
-                    i.ico.ico-spiral
-                    img(src='images/heroPhone.png')
+                  .hero__image
+                    i.ico.ico-hero-phone
+                      i.ico.ico-spiral
                       
         // TEXT SECTION :: START
         .section.section--gray
@@ -147,7 +147,7 @@ html
         .section.section--testimonials
           .container
             .testimonials.text-center
-              .owl-carousel.owl--arrows#owlTestimonials
+              .slick--arrows#owlTestimonials
                 .testimonials__slide
                   .section-title What Doctors Are Saying
                   .testimonials__content “Really enjoyed using Messly to find locum work. It’s been really easy to use and gives me much more visibility on available work“

@@ -590,20 +590,48 @@ body, html {
 }
 .ico-spiral {
     position: absolute;
-    top: -30%;
-    right: -10%;
-    z-index: 5;
+    top: -45%;
+    right: -65%;
+    z-index: -1;
     width: 1358px;
     height: 1358px;
-    background: url('../images/el/heroCircles.png') no-repeat 100% center;
-    -webkit-animation-name: r2otate;
-            animation-name: r2otate;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    background: url('../images/el/heroCircles.png') no-repeat right center;
+}
+@media(max-width: 768px) {
+    .ico-spiral {
+        top: -66%;
+        right: -115%;
+        -webkit-transform: scale(.8);
+            -ms-transform: scale(.8);
+                transform: scale(.8);
+    }
+}
+@media(max-width: 568px) {
+    .ico-spiral {
+        top: -100%;
+        right: -150%;
+    }
+}
+.ico-hero-phone {
+    position: relative;
+    width: 355px;
+    height: 724px;
+    background: url('../images/heroPhone.png') no-repeat center center;
+    background-size: 355px 724px;
+}
+@media(max-width: 768px) {
+    .ico-hero-phone {
+        width: 284px;
+        height: 580px;
+        background-size: 284px 580px;
+    }
+}
+@media(max-width: 568px) {
+    .ico-hero-phone {
+        width: 230px;
+        height: 500px;
+        background-size: 230px 500px;
+    }
 }
 .ico-logo {
     width: 229px;
@@ -1029,14 +1057,14 @@ button:focus {
     }
 }
 /* OWL */
-.owl {}
-.owl--dots-right {
+.slick {}
+.slick--dots-right {
     position: relative;
 }
-.owl--dots-right .owl-dots {
+.slick--dots-right .slick-dots {
     position: absolute;
-    top: 200px;
-    right: 0;
+    top: 50%;
+    right: 20px;
     z-index: 5;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1047,49 +1075,78 @@ button:focus {
             flex-direction: column;
     -webkit-align-items: center;
             align-items: center;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-box-align: center;
         -ms-flex-align: center;
 }
-.owl--dots-right .owl-dot {
+.slick--dots-right .slick-dots li {
+    display: block;
+}
+.slick--dots-right .slick-dots li button {
+    display: none;
+}
+.slick--dots-right .slick-dots li:before {
+    display: block;
     display: block;
     margin-bottom: 10px;
     width: 6px;
     height: 6px;
+    border: none;
     border-radius: 50%;
     background: #ffffff;
     background: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: none;
+            box-shadow: none;
     content: ' ';
+    content: ' ';
+    font-size: 0;
     cursor: pointer;
     -webkit-transition: all .25s ease;
     transition: all .25s ease;
 }
-.owl--dots-right .owl-dot.active {
+.slick--dots-right .slick-dots li.slick-active {}
+.slick--dots-right .slick-dots li.slick-active:before {
     width: 10px;
     height: 10px;
     background: white;
 }
-.owl--arrows .owl-next, .owl--arrows .owl-prev {
+@media(max-width: 568px) {
+    .slick--dots-right .slick-dots {
+        top: 120px;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+}
+.slick--arrows .slick-prev, .slick--arrows .slick-next {
     position: absolute;
     top: 50%;
+    z-index: 9;
     display: block;
     width: 16px;
     height: 28px;
-    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='28px' viewBox='0 0 16 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EIcon%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Landing-Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Mlocum---Doctors---Homepage' transform='translate(-151.000000, -4911.000000)' fill='%23E7EAEC'%3E %3Cg id='Groups' transform='translate(0.000000, -3.000000)'%3E %3Cg id='Testimonials' transform='translate(0.000000, 4580.000000)'%3E %3Cpath d='M151.490743,349.157059 C150.836419,348.518 150.836419,347.482 151.490743,346.842941 L164.386913,334.239647 C164.713654,333.920118 165.244187,333.920118 165.570929,334.239647 L166.754944,335.396706 C167.081685,335.716235 167.081685,336.234235 166.754944,336.553765 L155.633956,347.421059 C155.307215,347.740588 155.307215,348.259412 155.633956,348.578118 L166.754944,359.446235 C167.081685,359.765765 167.081685,360.283765 166.754944,360.603294 L165.570929,361.760353 C165.244187,362.079882 164.713654,362.079882 164.386913,361.760353 L151.490743,349.157059 Z' id='Icon'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='28px' viewBox='0 0 16 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23E7EAEC'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EIcon%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Landing-Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Mlocum---Doctors---Homepage' transform='translate(-151.000000, -4911.000000)'%3E %3Cg id='Groups' transform='translate(0.000000, -3.000000)'%3E %3Cg id='Testimonials' transform='translate(0.000000, 4580.000000)'%3E %3Cpath d='M151.490743,349.157059 C150.836419,348.518 150.836419,347.482 151.490743,346.842941 L164.386913,334.239647 C164.713654,333.920118 165.244187,333.920118 165.570929,334.239647 L166.754944,335.396706 C167.081685,335.716235 167.081685,336.234235 166.754944,336.553765 L155.633956,347.421059 C155.307215,347.740588 155.307215,348.259412 155.633956,348.578118 L166.754944,359.446235 C167.081685,359.765765 167.081685,360.283765 166.754944,360.603294 L165.570929,361.760353 C165.244187,362.079882 164.713654,362.079882 164.386913,361.760353 L151.490743,349.157059 Z' id='Icon'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
     content: ' ';
     font-size: 0;
+    cursor: pointer;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
 }
-.owl--arrows .owl-next {
+.slick--arrows .slick-prev:hover, .slick--arrows .slick-next:hover {
+    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='16px' height='28px' viewBox='0 0 16 28' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%237F8FA4'%3E %3C!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EIcon%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Landing-Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='Mlocum---Doctors---Homepage' transform='translate(-151.000000, -4911.000000)'%3E %3Cg id='Groups' transform='translate(0.000000, -3.000000)'%3E %3Cg id='Testimonials' transform='translate(0.000000, 4580.000000)'%3E %3Cpath d='M151.490743,349.157059 C150.836419,348.518 150.836419,347.482 151.490743,346.842941 L164.386913,334.239647 C164.713654,333.920118 165.244187,333.920118 165.570929,334.239647 L166.754944,335.396706 C167.081685,335.716235 167.081685,336.234235 166.754944,336.553765 L155.633956,347.421059 C155.307215,347.740588 155.307215,348.259412 155.633956,348.578118 L166.754944,359.446235 C167.081685,359.765765 167.081685,360.283765 166.754944,360.603294 L165.570929,361.760353 C165.244187,362.079882 164.713654,362.079882 164.386913,361.760353 L151.490743,349.157059 Z' id='Icon'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+}
+.slick--arrows .slick-next {
     right: 0;
     -webkit-transform: translateY(-50%) rotate(180deg);
         -ms-transform: translateY(-50%) rotate(180deg);
             transform: translateY(-50%) rotate(180deg);
 }
-.owl--arrows .owl-prev {
+.slick--arrows .slick-prev {
     left: 0;
 }
 /* SLICK */
@@ -1128,9 +1185,7 @@ a.hoverable-dash:hover:after {
     background: #354052;
 }
 .hero .slick-list {
-    margin-top: -20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin-right: -20px;
 }
 .hero__title {
     margin-top: 15vh;
@@ -1147,7 +1202,8 @@ a.hoverable-dash:hover:after {
     line-height: 1.45;
 }
 .hero__card {
-    padding-top: 120px;
+    overflow: hidden;
+    min-height: 900px;
 }
 .hero__card__wrapper {
     display: -webkit-box;
@@ -1156,6 +1212,7 @@ a.hoverable-dash:hover:after {
     display: flex;
     -webkit-justify-content: space-between;
             justify-content: space-between;
+    padding-top: 120px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
 }
@@ -1167,26 +1224,15 @@ a.hoverable-dash:hover:after {
 }
 .hero__image {
     position: relative;
-    -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    margin-left: auto;
-    -webkit-box-flex: 0;
-}
-.hero__image img {
-    position: relative;
-    z-index: 6;
-    max-width: 100%;
-}
-.hero__image--retina img {
-    -webkit-transform: scale(.5);
-        -ms-transform: scale(.5);
-            transform: scale(.5);
-    -webkit-transform-origin: top center;
-        -ms-transform-origin: top center;
-            transform-origin: top center;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    text-align: center;
+    -webkit-box-flex: 1;
 }
 .hero__cta {
+    position: relative;
+    z-index: 9;
     margin-top: 10vh;
 }
 .hero__sponsor {
@@ -1210,15 +1256,91 @@ a.hoverable-dash:hover:after {
             transform-origin: top left;
 }
 @media(max-width: 768px) {
-    .hero {}
+    .hero {
+        min-height: 780px;
+    }
     .hero__title {
         margin-top: 60px;
+        font-size: 48px;
+    }
+    .hero__card {
+        min-height: 780px;
+    }
+    .hero__card__content {
+        -webkit-flex: 0 0 380px;
+            -ms-flex: 0 0 380px;
+                flex: 0 0 380px;
+        -webkit-box-flex: 0;
     }
 }
 @media(max-width: 568px) {
     .hero {
         min-height: 600px;
         height: auto;
+    }
+    .hero .slick-list {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+    .hero__title {
+        margin-top: 0px;
+        font-size: 42px;
+    }
+    .hero__title br {
+        display: none;
+    }
+    .hero__description {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .hero__description br {
+        display: none;
+    }
+    .hero__card {}
+    .hero__card__content {
+        -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+        -webkit-box-flex: 0;
+    }
+    .hero__card__wrapper {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+    .hero__image {
+        position: relative;
+        -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+        margin-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+        -webkit-box-flex: 1;
+    }
+    .hero__cta {
+        margin-top: 30px;
+    }
+    .hero__sponsor {
+        margin-top: 50px;
+    }
+    .hero__sponsor span {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .hero__sponsor img {
+        margin-left: -5px;
+        -webkit-transform: scale(.4);
+            -ms-transform: scale(.4);
+                transform: scale(.4);
+    }
+}
+@media(max-width: 414px) {
+    .hero {}
+    .hero__title {
+        font-size: 40px;
     }
 }
 /* SECTIONS */
