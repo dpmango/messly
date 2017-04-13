@@ -29,4 +29,4 @@ __Production__
 
 
 ### Recend push command
-gulp build && git add . && git commit -m "laptop image" && git push && git subtree --prefix dist push origin gh-pages
+gulp build && git add . && git commit -m "hero slider mobile" && git push && git subtree --prefix dist push origin gh-pages

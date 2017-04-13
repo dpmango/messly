@@ -1,4 +1,28 @@
-'use strict';
+"use strict";
+
+// set dalay on resize event to prevent huge memory consumption
+(function ($) {
+  var uniqueCntr = 0;
+  $.fn.resized = function (waitTime, fn) {
+    if (typeof waitTime === "function") {
+      fn = waitTime;
+      waitTime = 50;
+    }
+    var tag = "scrollTimer" + uniqueCntr++;
+    this.resize(function () {
+      var self = $(this);
+      var timer = self.data(tag);
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(function () {
+        self.removeData(tag);
+        fn.call(self[0]);
+      }, waitTime);
+      self.data(tag, timer);
+    });
+  };
+})(jQuery);
 
 $(document).ready(function () {
 
@@ -30,7 +54,23 @@ $(document).ready(function () {
     adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 7000,
-    pauseOnHover: false
+    pauseOnHover: false,
+    responsive: [{
+      breakpoint: 568,
+      settings: {
+        autoplay: false,
+        dots: false,
+        draggable: false,
+        swipe: false,
+        touchMove: false
+      }
+    }]
+  });
+
+  _window.resized(100, function () {
+    if (_window.width() <= 568) {
+      $('#owlHero').slick('slickGoTo', 1);
+    }
   });
 
   $('#owlTestimonials').slick({
