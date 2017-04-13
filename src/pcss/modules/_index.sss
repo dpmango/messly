@@ -339,20 +339,29 @@
 .community
   display: flex
   justify-content: space-between
-  margin-left: -20px
   &__image
     flex: 0 1 560px
     img
       max-width: 100%
+      margin-left: 0
   &__content
     margin-left: auto
     flex: 0 1 600px
+
+@media(width <= 1440px)
+  .community
+    margin-left: -20px
+    &__image
+      img
+        margin-left: -16%
 
 @media($desktop)
   .community
     align-items: center
     &__image
       flex: 0 1 560px
+      img
+        max-width: 116%
     &__content
       margin-left: 30px
 
@@ -360,10 +369,15 @@
   .community
     flex-wrap: wrap
     margin-left: 0px
+    text-align: center
     &__image
       order: 2
       flex: 0 1 250px
-      margin-left: -15px
+      text-align: center
+      margin-left: auto
+      margin-right: auto
+      img
+        margin-left: -7%
     &__content
       order: 1
       margin-bottom: 30px
