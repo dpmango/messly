@@ -9,8 +9,8 @@ html
         
         // HERO :: START
         .hero
-          .container
-            .owl-carousel.owl--dots-right#owlHero
+          .container.container--no-pad
+            .owl--dots-right#owlHero
               // card
               .hero__card
                 .hero__card__wrapper
@@ -21,6 +21,9 @@ html
                       a(href='#').btn.btn--red.btn--mw240
                         i.icon.icon-user-md
                         span REGISTER
+                    .hero__sponsor
+                      span Supported By
+                      img(src='images/imperialdarkblue@2x.png')
 
                   .hero__image.hero__image--retina
                     i.ico.ico-spiral
@@ -32,28 +35,32 @@ html
                     .hero__title Locum without <br> the hassle
                     .hero__description Connect directly with your hospital <br> departments to locum whenever and <br> wherever you want
                     .hero__cta
-                      a(href='#').btn.btn--red
-                        i.ico.ico-btn-doctor
+                      a(href='#').btn.btn--red.btn--mw240
+                        i.icon.icon-user-md
                         span REGISTER
+                    .hero__sponsor
+                      span Supported By
+                      img(src='images/imperialdarkblue@2x.png')
 
                   .hero__image.hero__image--retina
+                    i.ico.ico-spiral
                     img(src='images/heroPhone.png')
                       
         // TEXT SECTION :: START
         .section.section--gray
           .container
             .row.row--jcc
-              .col.col--4-6.text-center
+              .col.col--4-6.col--full--tablet.text-center
                 .section-title.section-title--green We’re fixing locums for the NHS 
-                .section-text.mt60 Telephone calls. Endless emails. Fax machines(!). We ‘ve been there and know how inefficient and cumbersome locum work is for both doctors and hospitals. We’ve had enough - we want to fix it.
-                a(href='#').btn.btn--ghost.btn--ghost--muted.mt80 Read About Our Mission
+                .section-text.mt60.mt30--tablet Telephone calls. Endless emails. Fax machines(!). We ‘ve been there and know how inefficient and cumbersome locum work is for both doctors and hospitals. We’ve had enough - we want to fix it.
+                a(href='#').btn.btn--ghost.btn--ghost--muted.mt80.mt40--tablet Read About Our Mission
   
         // HOW SECTION :: START
         .section.section--light-blue
           .container
             .text-center
               .section-title How It Works
-            .how.mt80
+            .how.mt80.mt40--tablet
               .how__card
                 i.ico.ico-how-medical-file
                 .how__card__title Create
@@ -86,7 +93,7 @@ html
                   .features__block__title The best rates
                   .features__block__description We don’t charge commission <br> to hospitals to you they can <br> give you the best rates.
                 .features__block
-                  i.ico.ico-feature-graph
+                  i.ico.ico-feature-cloud
                   .features__block__title Rewards
                   .features__block__description Keep track of all the locum work and  finances through our dashboard
               
@@ -99,11 +106,11 @@ html
                   .features__block__description Designed by trainees to create a <br> better experience for locum work
 
                 .features__block
-                  i.ico.ico-feature-graph
+                  i.ico.ico-feature-globe
                   .features__block__title Track all your locum work
                   .features__block__description Keep track of all your locum work <br> and finances through our dashboard
                 .features__block
-                  i.ico.ico-feature-graph
+                  i.ico.ico-feature-infinity
                   .features__block__title Smart Alerts
                   .features__block__description Stay in control of you locum work <br> by choosing what shifts you want to hear about and how often.
         
@@ -116,8 +123,11 @@ html
               .community__content
                 .section-title Join the Messly Community
                 .section-text.mt15 We’re not just about locums. We’ve built a community of over 3500 doctors, helping each other with their careers and training. We believe in colloboration to make being a doctor more rewarding.
-                .text-center
+                .text-center.hidden--desktop
                   a(href='#').btn.btn--ghost.btn--ghost--muted.mt70 Visit Messly.co.uk  
+              
+            .text-center.visible--desktop
+              a(href='#').btn.btn--ghost.btn--ghost--muted.mt70 Visit Messly.co.uk  
 
         // ABOUT :: START
         .section.section--about

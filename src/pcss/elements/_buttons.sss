@@ -26,8 +26,12 @@ button
     &--muted
       border-color: #8DABC4
       color: $fontColorMuted
+      &:hover
+        background: #8DABC4
+        color: white
 
   &--red
+    position: relative
     background: $colorRed
     color: white
     border-radius: 6px
@@ -38,6 +42,23 @@ button
       left: 25px
       transform: translateY(-50%)
       font-size: 25px
+    span
+      display: inline-block
+      padding-left: 20px
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0 0 0 0
+      border-radius: 6px
+      opacity: 0
+      border: 2px solid white
+      transition: all $transitionSpeed ease-in-out
+
+    &:hover
+      background: $fontColor
+      &::after
+        position: absolute 4px
+        opacity: 1
 
   &--mw240
     min-width: 240px

@@ -8,6 +8,7 @@
   left: 0
   width: 100%
   color: white
+  z-index: 9
   padding-top: 35px
   padding-bottom: 20px
   &__wrapper
@@ -24,7 +25,26 @@
       &:last-child
         margin-right: 0
 
+@media($mobile)
+  .header
+    padding-top: 20px
 
+@media($mobile-s)
+  .header
+    &__menu
+      a
+        font-size: 14px
+        margin-right: 10px
+
+@media(width <= 360px)
+  .header
+    &__menu
+      flex-direction: column
+      a
+        margin-right: 0
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
 
 // FOOTER
 .footer
@@ -32,12 +52,19 @@
   padding: 30px 0
   background: #354052
   color: white
+  &__wrapper
+    display: flex
+    align-items: center
+    flex-wrap: wrap
   &__socials
+    flex: 0 0 140px
     a
       margin-right: 18px
       &:last-child
         margin-right: 0
   &__menu
+    flex: 1 1 auto
+    text-align: center
     a
       display: inline-block
       margin-right: 30px
@@ -45,10 +72,35 @@
       &:last-child
         margin-right: 0
   &__copy
+    flex: 0 0 140px
+    text-align: right
     font-size: 14px
     color: $colorWhiteMuted
 
+@media($tablet)
+  .footer
+    &__wrapper
+      flex-direction: column
+    &__socials
+      order: 2
+      flex: 1 1 auto
+      margin-top: 25px
+      margin-bottom: 25px
+    &__menu
+      order: 1
+      a
+        margin-right: 25px
 
+    &__copy
+      order: 3
+      flex: 1 1 auto
+
+@media(width <= 500px)
+  .footer
+    &__menu
+      font-size: 15px
+      a
+        margin-bottom: 10px
 
 
 // OWL
@@ -91,3 +143,28 @@
       right: 0
     .owl-prev
       left: 0
+
+
+// SLICK
+.slick-slide
+  outline: none
+
+
+// ANIMATION CLASSES
+a.hoverable-dash
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    height: 3px
+    left: 50%
+    right: 50%
+    transition: $transitionSpeed all
+    opacity: 0
+    bottom: -3px
+    background-color: white
+  &:hover
+    &:after
+      left: 0
+      right: 0
+      opacity: 1

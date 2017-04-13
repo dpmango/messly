@@ -18,7 +18,7 @@
             <div class="row">
               <div class="col col--auto">
                 <div class="header__wrapper"><a href="#"><i class="ico ico-logo"></i></a>
-                  <div class="header__menu"><a href="#">Sign In</a><a class="btn btn--ghost btn--ghost--white" href="#">Register</a></div>
+                  <div class="header__menu"><a class="hoverable-dash" href="#">Sign In</a><a class="btn btn--ghost btn--ghost--white" href="#">Register</a></div>
                 </div>
               </div>
             </div>
@@ -26,8 +26,8 @@
         </div>
         <!-- HERO :: START-->
         <div class="hero">
-          <div class="container">
-            <div class="owl-carousel owl--dots-right" id="owlHero">
+          <div class="container container--no-pad">
+            <div class="owl--dots-right" id="owlHero">
               <!-- card-->
               <div class="hero__card">
                 <div class="hero__card__wrapper">
@@ -35,6 +35,7 @@
                     <div class="hero__title">Locum without <br> the hassle</div>
                     <div class="hero__description">Connect directly with your hospital <br> departments to locum whenever and <br> wherever you want</div>
                     <div class="hero__cta"><a class="btn btn--red btn--mw240" href="#"><i class="icon icon-user-md"></i><span>REGISTER</span></a></div>
+                    <div class="hero__sponsor"><span>Supported By</span><img src="images/imperialdarkblue@2x.png"></div>
                   </div>
                   <div class="hero__image hero__image--retina"><i class="ico ico-spiral"></i><img src="images/heroPhone.png"></div>
                 </div>
@@ -45,9 +46,10 @@
                   <div class="hero__card__content">
                     <div class="hero__title">Locum without <br> the hassle</div>
                     <div class="hero__description">Connect directly with your hospital <br> departments to locum whenever and <br> wherever you want</div>
-                    <div class="hero__cta"><a class="btn btn--red" href="#"><i class="ico ico-btn-doctor"></i><span>REGISTER</span></a></div>
+                    <div class="hero__cta"><a class="btn btn--red btn--mw240" href="#"><i class="icon icon-user-md"></i><span>REGISTER</span></a></div>
+                    <div class="hero__sponsor"><span>Supported By</span><img src="images/imperialdarkblue@2x.png"></div>
                   </div>
-                  <div class="hero__image hero__image--retina"><img src="images/heroPhone.png"></div>
+                  <div class="hero__image hero__image--retina"><i class="ico ico-spiral"></i><img src="images/heroPhone.png"></div>
                 </div>
               </div>
             </div>
@@ -57,9 +59,9 @@
         <div class="section section--gray">
           <div class="container">
             <div class="row row--jcc">
-              <div class="col col--4-6 text-center">
+              <div class="col col--4-6 col--full--tablet text-center">
                 <div class="section-title section-title--green">We’re fixing locums for the NHS </div>
-                <div class="section-text mt60">Telephone calls. Endless emails. Fax machines(!). We ‘ve been there and know how inefficient and cumbersome locum work is for both doctors and hospitals. We’ve had enough - we want to fix it.</div><a class="btn btn--ghost btn--ghost--muted mt80" href="#">Read About Our Mission</a>
+                <div class="section-text mt60 mt30--tablet">Telephone calls. Endless emails. Fax machines(!). We ‘ve been there and know how inefficient and cumbersome locum work is for both doctors and hospitals. We’ve had enough - we want to fix it.</div><a class="btn btn--ghost btn--ghost--muted mt80 mt40--tablet" href="#">Read About Our Mission</a>
               </div>
             </div>
           </div>
@@ -70,7 +72,7 @@
             <div class="text-center">
               <div class="section-title">How It Works</div>
             </div>
-            <div class="how mt80">
+            <div class="how mt80 mt40--tablet">
               <div class="how__card"><i class="ico ico-how-medical-file"></i>
                 <div class="how__card__title">Create</div>
                 <div class="how__card__description">Create your profile with Messly <br> and tell us what hospitals and departments you’d like to locum in</div>
@@ -103,7 +105,7 @@
                   <div class="features__block__title">The best rates</div>
                   <div class="features__block__description">We don’t charge commission <br> to hospitals to you they can <br> give you the best rates.</div>
                 </div>
-                <div class="features__block"><i class="ico ico-feature-graph"></i>
+                <div class="features__block"><i class="ico ico-feature-cloud"></i>
                   <div class="features__block__title">Rewards</div>
                   <div class="features__block__description">Keep track of all the locum work and  finances through our dashboard</div>
                 </div>
@@ -114,11 +116,11 @@
                   <div class="features__block__title">Created by traineees</div>
                   <div class="features__block__description">Designed by trainees to create a <br> better experience for locum work</div>
                 </div>
-                <div class="features__block"><i class="ico ico-feature-graph"></i>
+                <div class="features__block"><i class="ico ico-feature-globe"></i>
                   <div class="features__block__title">Track all your locum work</div>
                   <div class="features__block__description">Keep track of all your locum work <br> and finances through our dashboard</div>
                 </div>
-                <div class="features__block"><i class="ico ico-feature-graph"></i>
+                <div class="features__block"><i class="ico ico-feature-infinity"></i>
                   <div class="features__block__title">Smart Alerts</div>
                   <div class="features__block__description">Stay in control of you locum work <br> by choosing what shifts you want to hear about and how often.</div>
                 </div>
@@ -134,9 +136,10 @@
               <div class="community__content">
                 <div class="section-title">Join the Messly Community</div>
                 <div class="section-text mt15">We’re not just about locums. We’ve built a community of over 3500 doctors, helping each other with their careers and training. We believe in colloboration to make being a doctor more rewarding.</div>
-                <div class="text-center"><a class="btn btn--ghost btn--ghost--muted mt70" href="#">Visit Messly.co.uk  </a></div>
+                <div class="text-center hidden--desktop"><a class="btn btn--ghost btn--ghost--muted mt70" href="#">Visit Messly.co.uk  </a></div>
               </div>
             </div>
+            <div class="text-center visible--desktop"><a class="btn btn--ghost btn--ghost--muted mt70" href="#">Visit Messly.co.uk  </a></div>
           </div>
         </div>
         <!-- ABOUT :: START-->
@@ -196,16 +199,10 @@
       <!-- FOOTER::START-->
       <div class="footer">
         <div class="container">
-          <div class="row row--aic">
-            <div class="col col--1-6">
-              <div class="footer__socials"><a href="#"><i class="ico ico-social-fb"></i></a><a href="#"><i class="ico ico-social-tw"></i></a></div>
-            </div>
-            <div class="col col--4-6 text-center">
-              <div class="footer__menu"><a href="#">Privacy</a><a href="#">Contact</a><a href="#">Mission</a><a href="#">Sign In</a><a href="#">Register</a></div>
-            </div>
-            <div class="col col--1-6 text-right">
-              <div class="footer__copy">© 2017 Messly Ltd</div>
-            </div>
+          <div class="footer__wrapper">
+            <div class="footer__socials"><a href="#"><i class="ico ico-social-fb"></i></a><a href="#"><i class="ico ico-social-tw"></i></a></div>
+            <div class="footer__menu"><a class="hoverable-dash" href="#">Privacy</a><a class="hoverable-dash" href="#">Contact</a><a class="hoverable-dash" href="#">Mission</a><a class="hoverable-dash" href="#">Sign In</a><a class="hoverable-dash" href="#">Register</a></div>
+            <div class="footer__copy">© 2017 Messly Ltd</div>
           </div>
         </div>
       </div>

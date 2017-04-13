@@ -16,17 +16,28 @@ $(document).ready(function(){
 	});
 
   // owl
-  $('#owlHero').owlCarousel({
-    loop: true,
-    items: 1,
-    autoplay: true,
-    autoplayTimeout: 7000,
-    responsiveRefreshRate: 50,
-    nav: false,
+  // $('#owlHero').owlCarousel({
+  //   loop: true,
+  //   items: 1,
+  //   autoplay: true,
+  //   autoplayTimeout: 7000,
+  //   responsiveRefreshRate: 50,
+  //   nav: false,
+  //   dots: true,
+  //   margin: 0,
+  //   animateIn: 'fadeInUp',
+  //   animateOut: 'fadeOutUp'
+  // });
+
+  $('#owlHero').slick({
     dots: true,
-    margin: 0,
-    animateIn: 'fadeInUp',
-    animateOut: 'fadeOutUp'
+    prevArrow: "",
+    nextArrow: "",
+    vertical: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
   });
 
   $('#owlTestimonials').owlCarousel({

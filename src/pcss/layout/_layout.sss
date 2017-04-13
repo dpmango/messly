@@ -31,7 +31,9 @@ body, html
   margin-right: auto
   padding-left: 20px
   padding-right: 20px
-
+  &--no-pad
+    padding-left: 0
+    padding-right: 0  
 .app
   position: relative
   display: flex
@@ -42,3 +44,8 @@ body, html
   &.lock
     overflow-y: hidden
     max-height: 100vh
+
+@media($mobile)
+  .container
+    padding-left: 15px
+    padding-right: 15px

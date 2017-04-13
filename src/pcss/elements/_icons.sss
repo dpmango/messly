@@ -23,6 +23,10 @@
   &-logo
     background-image: url('../images/el/V2awhite@2x.png')
     size: 229px 64px
+    @media($mobile)
+      size: 180px 50px
+    @media($mobile-s)
+      size: 160px 45px
 
   &-social-fb
     background-image: svg-load('../../images/svg/social-facebook.svg', fill=#fff)
