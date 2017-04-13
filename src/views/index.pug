@@ -3,177 +3,175 @@ html
   include shared/head.pug
 
   body
-    .app
-      .app__content
-        include shared/header-abs.pug
+    include shared/header-abs.pug
+    
+    // HERO :: START
+    .hero
+      .container
+        .slick--dots-right#owlHero
+          // card
+          .hero__card
+            .hero__card__wrapper
+              .hero__card__content
+                .hero__title Locum without <br> the hassle
+                .hero__description Connect directly with your hospital <br> departments to locum whenever and <br> wherever you want
+                .hero__cta
+                  a(href='#').btn.btn--red.btn--mw240
+                    i.icon.icon-user-md
+                    span REGISTER
+                .hero__sponsor
+                  span Supported By
+                  img(src='images/imperialdarkblue@2x.png')
+
+              .hero__image
+                i.ico.ico-hero-phone
+                  i.ico.ico-spiral
+          // card
+          .hero__card
+            .hero__card__wrapper
+              .hero__card__content
+                .hero__title Locum without <br> the hassle
+                .hero__description Connect directly with your hospital <br> departments to locum whenever and <br> wherever you want
+                .hero__cta
+                  a(href='#').btn.btn--red.btn--mw240
+                    i.icon.icon-user-md
+                    span REGISTER
+                .hero__sponsor
+                  span Supported By
+                  img(src='images/imperialdarkblue@2x.png')
+
+              .hero__image
+                i.ico.ico-hero-phone
+                  i.ico.ico-spiral
+                  
+    // TEXT SECTION :: START
+    .section.section--gray
+      .container
+        .row.row--jcc
+          .col.col--4-6.col--full--tablet.text-center
+            .section-title.section-title--green We’re fixing locums for the NHS 
+            .section-text.mt60.mt30--tablet Telephone calls. Endless emails. Fax machines(!). We ‘ve been there and know how inefficient and cumbersome locum work is for both doctors and hospitals. We’ve had enough - we want to fix it.
+            a(href='#').btn.btn--ghost.btn--ghost--muted.mt80.mt40--tablet Read About Our Mission
+
+    // HOW SECTION :: START
+    .section.section--light-blue
+      .container
+        .text-center
+          .section-title How It Works
+        .how.mt80.mt40--tablet
+          .how__card
+            i.ico.ico-how-medical-file
+            .how__card__title Create
+            .how__card__description Create your profile with Messly <br> and tell us what hospitals and departments you’d like to locum in
+          .how__card
+            i.ico.ico-how-hospital
+            .how__card__title Connect
+            .how__card__description Our plaform connects you directly <br> with available shifts and rota coordinators within those departments
+
+          .how__card
+            i.ico.ico-how-swipe
+            .how__card__title Book
+            .how__card__description Search and book available shifts in your departments and get smartly alerted to shifts you want to hear about
+    
+    // FEATURES :: START
+    .section.section--features
+      .container
+        .text-center
+          .section-title Taking the hassle out of locum work
+          .section-text.mt15 We want finding locum work to be as simple and <br> transparent as ordering a takeaway
         
-        // HERO :: START
-        .hero
-          .container
-            .slick--dots-right#owlHero
-              // card
-              .hero__card
-                .hero__card__wrapper
-                  .hero__card__content
-                    .hero__title Locum without <br> the hassle
-                    .hero__description Connect directly with your hospital <br> departments to locum whenever and <br> wherever you want
-                    .hero__cta
-                      a(href='#').btn.btn--red.btn--mw240
-                        i.icon.icon-user-md
-                        span REGISTER
-                    .hero__sponsor
-                      span Supported By
-                      img(src='images/imperialdarkblue@2x.png')
-
-                  .hero__image
-                    i.ico.ico-hero-phone
-                      i.ico.ico-spiral
-              // card
-              .hero__card
-                .hero__card__wrapper
-                  .hero__card__content
-                    .hero__title Locum without <br> the hassle
-                    .hero__description Connect directly with your hospital <br> departments to locum whenever and <br> wherever you want
-                    .hero__cta
-                      a(href='#').btn.btn--red.btn--mw240
-                        i.icon.icon-user-md
-                        span REGISTER
-                    .hero__sponsor
-                      span Supported By
-                      img(src='images/imperialdarkblue@2x.png')
-
-                  .hero__image
-                    i.ico.ico-hero-phone
-                      i.ico.ico-spiral
-                      
-        // TEXT SECTION :: START
-        .section.section--gray
-          .container
-            .row.row--jcc
-              .col.col--4-6.col--full--tablet.text-center
-                .section-title.section-title--green We’re fixing locums for the NHS 
-                .section-text.mt60.mt30--tablet Telephone calls. Endless emails. Fax machines(!). We ‘ve been there and know how inefficient and cumbersome locum work is for both doctors and hospitals. We’ve had enough - we want to fix it.
-                a(href='#').btn.btn--ghost.btn--ghost--muted.mt80.mt40--tablet Read About Our Mission
-  
-        // HOW SECTION :: START
-        .section.section--light-blue
-          .container
-            .text-center
-              .section-title How It Works
-            .how.mt80.mt40--tablet
-              .how__card
-                i.ico.ico-how-medical-file
-                .how__card__title Create
-                .how__card__description Create your profile with Messly <br> and tell us what hospitals and departments you’d like to locum in
-              .how__card
-                i.ico.ico-how-hospital
-                .how__card__title Connect
-                .how__card__description Our plaform connects you directly <br> with available shifts and rota coordinators within those departments
-
-              .how__card
-                i.ico.ico-how-swipe
-                .how__card__title Book
-                .how__card__description Search and book available shifts in your departments and get smartly alerted to shifts you want to hear about
-        
-        // FEATURES :: START
-        .section.section--features
-          .container
-            .text-center
-              .section-title Taking the hassle out of locum work
-              .section-text.mt15 We want finding locum work to be as simple and <br> transparent as ordering a takeaway
-            
-            .features
-              .features__left
-                .features__block
-                  i.icon.icon-hospital-o
-                  .features__block__title All Your Departments
-                  .features__block__description Register with locum banks across all your hospitals in the region
-                .features__block
-                  i.ico.ico-feature-graph
-                  .features__block__title The best rates
-                  .features__block__description We don’t charge commission <br> to hospitals to you they can <br> give you the best rates.
-                .features__block
-                  i.ico.ico-feature-cloud
-                  .features__block__title Rewards
-                  .features__block__description Keep track of all the locum work and  finances through our dashboard
-              
-              .features__center
-                img(src='images/iphonehand@2x.png')
-              .features__right
-                .features__block
-                  i.ico.ico-feature-devise
-                  .features__block__title Created by traineees
-                  .features__block__description Designed by trainees to create a <br> better experience for locum work
-
-                .features__block
-                  i.ico.ico-feature-globe
-                  .features__block__title Track all your locum work
-                  .features__block__description Keep track of all your locum work <br> and finances through our dashboard
-                .features__block
-                  i.ico.ico-feature-infinity
-                  .features__block__title Smart Alerts
-                  .features__block__description Stay in control of you locum work <br> by choosing what shifts you want to hear about and how often.
-        
-        // COMMUNITY :: START
-        .section.section--community
-          .container
-            .community
-              .community__image
-                img(src='images/messlyLaptop@2x.png')
-              .community__content
-                .section-title Join the Messly Community
-                .section-text.mt15 We’re not just about locums. We’ve built a community of over 3500 doctors, helping each other with their careers and training. We believe in colloboration to make being a doctor more rewarding.
-                .text-center.hidden--desktop
-                  a(href='#').btn.btn--ghost.btn--ghost--muted.mt70 Visit Messly.co.uk  
-              
-            .text-center.visible--desktop
-              a(href='#').btn.btn--ghost.btn--ghost--muted.mt70 Visit Messly.co.uk  
-
-        // ABOUT :: START
-        .section.section--about
-          .container
-            .about
-              .about__content
-                .section-title
-                  i.icon.icon-slideshare
-                  span We are not an agency
-                .section-text.mt15 We are Abrar & Chris, best mates since 13 who came together a year ago to try and solve the complex challenges facing the NHS. With Abrar’s medical background and tech savyness and Chris’ corporate and strategic expertise we’re passionate about creating something to solve the inefficiencies of healthcare recruitment and improve the working lives of doctors. Messly is that something.
-                
-              .about__image
-                img(src='images/aboutFounders@2x.png')
-                .about__image__tag Abrar & Chris, <span>Founders of Messly</span>
+        .features
+          .features__left
+            .features__block
+              i.icon.icon-hospital-o
+              .features__block__title All Your Departments
+              .features__block__description Register with locum banks across all your hospitals in the region
+            .features__block
+              i.ico.ico-feature-graph
+              .features__block__title The best rates
+              .features__block__description We don’t charge commission <br> to hospitals to you they can <br> give you the best rates.
+            .features__block
+              i.ico.ico-feature-cloud
+              .features__block__title Rewards
+              .features__block__description Keep track of all the locum work and  finances through our dashboard
           
-        // TESTIMONIALS :: START
-        .section.section--testimonials
-          .container
-            .testimonials.text-center
-              .slick--arrows#owlTestimonials
-                .testimonials__slide
-                  .section-title What Doctors Are Saying
-                  .testimonials__content “Really enjoyed using Messly to find locum work. It’s been really easy to use and gives me much more visibility on available work“
-                  .testimonials__author Chris <span>ST6+,  Anaesthetics</span>
-                .testimonials__slide
-                  .section-title What Doctors Are Saying
-                  .testimonials__content “Really enjoyed using Messly to find locum work. It’s been really easy to use and gives me much more visibility on available work“
-                  .testimonials__author Chris <span>ST6+,  Anaesthetics</span>
+          .features__center
+            img(src='images/iphonehand@2x.png')
+          .features__right
+            .features__block
+              i.ico.ico-feature-devise
+              .features__block__title Created by traineees
+              .features__block__description Designed by trainees to create a <br> better experience for locum work
+
+            .features__block
+              i.ico.ico-feature-globe
+              .features__block__title Track all your locum work
+              .features__block__description Keep track of all your locum work <br> and finances through our dashboard
+            .features__block
+              i.ico.ico-feature-infinity
+              .features__block__title Smart Alerts
+              .features__block__description Stay in control of you locum work <br> by choosing what shifts you want to hear about and how often.
+    
+    // COMMUNITY :: START
+    .section.section--community
+      .container
+        .community
+          .community__image
+            img(src='images/messlyLaptop@2x.png')
+          .community__content
+            .section-title Join the Messly Community
+            .section-text.mt15 We’re not just about locums. We’ve built a community of over 3500 doctors, helping each other with their careers and training. We believe in colloboration to make being a doctor more rewarding.
+            .text-center.hidden--desktop
+              a(href='#').btn.btn--ghost.btn--ghost--muted.mt70 Visit Messly.co.uk  
+          
+        .text-center.visible--desktop
+          a(href='#').btn.btn--ghost.btn--ghost--muted.mt70 Visit Messly.co.uk  
+
+    // ABOUT :: START
+    .section.section--about
+      .container
+        .about
+          .about__content
+            .section-title
+              i.icon.icon-slideshare
+              span We are not an agency
+            .section-text.mt15 We are Abrar & Chris, best mates since 13 who came together a year ago to try and solve the complex challenges facing the NHS. With Abrar’s medical background and tech savyness and Chris’ corporate and strategic expertise we’re passionate about creating something to solve the inefficiencies of healthcare recruitment and improve the working lives of doctors. Messly is that something.
+            
+          .about__image
+            img(src='images/aboutFounders@2x.png')
+            .about__image__tag Abrar & Chris, <span>Founders of Messly</span>
+      
+    // TESTIMONIALS :: START
+    .section.section--testimonials
+      .container
+        .testimonials.text-center
+          .slick--arrows#owlTestimonials
+            .testimonials__slide
+              .section-title What Doctors Are Saying
+              .testimonials__content “Really enjoyed using Messly to find locum work. It’s been really easy to use and gives me much more visibility on available work“
+              .testimonials__author Chris <span>ST6+,  Anaesthetics</span>
+            .testimonials__slide
+              .section-title What Doctors Are Saying
+              .testimonials__content “Really enjoyed using Messly to find locum work. It’s been really easy to use and gives me much more visibility on available work“
+              .testimonials__author Chris <span>ST6+,  Anaesthetics</span>
+    
+    // BONUS :: START
+    .bonus
+      .container
+        .text-center
+          .section-title Register today and get a £10 Amazon Voucher
+          .section-text.mt30 No paperwork. We’ll get you setup in no time and <br> send you a voucher once you’re up and running.
         
-        // BONUS :: START
-        .bonus
-          .container
-            .text-center
-              .section-title Register today and get a £10 Amazon Voucher
-              .section-text.mt30 No paperwork. We’ll get you setup in no time and <br> send you a voucher once you’re up and running.
+        form(action='#').bonus__form.mt50
+          .ui-input.ui-input--muted
+            input(type='text' placeholder='Your name')
+          .ui-input.ui-input--muted
+            input(type='email' placeholder='Your email')
+          .ui-input.ui-input--muted
+            input(type='text' placeholder='Hospital')
+          a(href='#').btn.btn--red
+            i.icon.icon-user-md
+            span REGISTER
+                    
             
-            form(action='#').bonus__form.mt50
-              .ui-input.ui-input--muted
-                input(type='text' placeholder='Your name')
-              .ui-input.ui-input--muted
-                input(type='email' placeholder='Your email')
-              .ui-input.ui-input--muted
-                input(type='text' placeholder='Hospital')
-              a(href='#').btn.btn--red
-                i.icon.icon-user-md
-                span REGISTER
-                        
-            
-      include shared/footer.pug
+    include shared/footer.pug
